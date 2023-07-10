@@ -21,6 +21,12 @@ class Login extends CI_Controller{
             echo $message;
         }
     }
+    	// Les fonctions  de deconnexion
+	public function deconnectClient()
+	{
+		$this->session->unset_userdata('id');
+		$this->load->view('login');
+	}
     
 }
 

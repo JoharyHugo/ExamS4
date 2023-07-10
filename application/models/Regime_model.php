@@ -16,8 +16,8 @@
         }
         public function getRegimeSpecifique($idObjectif,$poids)
         {
-            $sql = "SELECT * FROM ObjectifUser WHERE idObjectif= %d  and poids= %d";
-            $sql = sprintf($sql,$idObjectif,$poids);
+            $sql = "SELECT * FROM V_RegimeSakafoComplet WHERE idObjectif= %d  and p1<=%d and p2>=%d";
+            $sql = sprintf($sql,$idObjectif,$poids,$poids);
             echo $sql;
             $query = $this->db->query($sql);
 
@@ -29,8 +29,8 @@
 
         public function getSportSpecifique($idRegime)
         {
-            $sql = "SELECT * FROM ObjectifUser WHERE idObjectif= %d  and poids= %d";
-            $sql = sprintf($sql,$idObjectif,$poids);
+            $sql = "SELECT * FROM  V_RegimeSportComplet WHERE idRegime=%d";
+            $sql = sprintf($sql,$idRegime);
             echo $sql;
             $query = $this->db->query($sql);
 
@@ -39,18 +39,19 @@
             return $row;
 
         }   
-        
-        public function inscription($nom, $mdp,$genre,$taille, $poids)
-        {  
-           $sql="insert into User values(null,'%s','%s','%s',%d,%d,0)";
-           $sql=sprintf($sql,$nom, $mdp,$genre,$taille, $poids);
-           try {
-           $this->db->query($sql);
-           //echo $sql;
-           } catch (Exception $e) {
-            throw new Exception($e->getMessage());
-           }
-        }
+
+        // public function historique($idObjet)
+        // {
+        //    $sql="select * from Echange where idObjetDemande=%d or idObjetEchange=%d and EtatEchange=1 and dateHeureAccepte is not null ";
+        //    $sql=sprintf($sql,$idObjet,$idObjet);
+        //   // echo $sql;
+        //    $query=$this->db->query($sql);
+        //    $liste=array();
+        //    foreach($query->result_array() as $row){
+        //     $liste[]=$row;
+        //    }
+        //    return $liste;
+        // }
         
     }
 ?>

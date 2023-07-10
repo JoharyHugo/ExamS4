@@ -4,7 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Corona Admin</title>
+    <title>Lègeréve compte</title>
     <link rel="stylesheet" href="<?php echo base_url("assets/bootstrap/css/bootstrap.css"); ?>">
     <!-- plugins:css -->
     <link rel="stylesheet" href="<?php echo base_url("assets/vendors/mdi/css/materialdesignicons.min.css");?>">
@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="<?php echo base_url("assets/css/style.css");?>">
     <link rel="stylesheet" href="<?php echo base_url("assets/css/styles.css");?>">
     <!-- End layout styles -->
-    <link rel="shortcut icon" href="<?php echo base_url("assets/images/favicon.png");?>" />
+    <link rel="shortcut icon" href="<?php echo base_url("assets/images/logo.png");?>" />
   </head>
   <body>
     <div class="container-scroller">

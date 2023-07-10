@@ -1,6 +1,6 @@
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
-          <a class="sidebar-brand brand-logo" href="index.html"><img src="<?php echo base_url("assets/images/logo.svg");?>" alt="logo" /></a>
+          <a class="sidebar-brand brand-logo" href="index.html" style=" font-family:amiri; color:white; font-size: 45px;"><img src="<?php echo base_url("assets/images/logo.png");?>" alt="logo" style=" width: 50px; height: 50px;"/>Légerève</a>
           <a class="sidebar-brand brand-logo-mini" href="index.html"><img src="<?php echo base_url("assets/images/logo-mini.svg");?>" alt="logo" /></a>
         </div>
         <ul class="nav">

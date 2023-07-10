@@ -29,7 +29,11 @@
                             <input type="password" class="form-input" name="mdp" id="mdp" placeholder="Password"/>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-input" name="genre" id="genre" placeholder="Genre"/>
+                            <select class="form-input" name="gender" id="gender">
+                                <option>votre genre</option>
+                                <option value="homme">Homme</option>
+                                <option value="femme">Femme</option>
+                            </select>
                         </div>
                         <div class="form-group">
                             <input type="text" class="form-input" name="taille" id="taille" placeholder="Taille"/>

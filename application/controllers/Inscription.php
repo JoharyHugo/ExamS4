@@ -38,7 +38,7 @@ class Inscription extends CI_Controller {
 		}
 		else {
 			$this->load->model('Inscription_model', 'model');
-			//$this->model->inscription($nom, $mdp, $genre, $taille,$poids);
+			$this->model->inscription($nom, $mdp, $genre, $taille,$poids);
 	
 			$test = $this->model->getIdFarany($nom);
 	        $idUser=$test['idUser'];

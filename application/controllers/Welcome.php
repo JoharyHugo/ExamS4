@@ -20,8 +20,12 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('accueil');
-		
+		// $this->load->view('objectifUser');
+		$this->load->view('headPage');
+		$this->load->view('nav1');
+		$this->load->view('nav2');
+		$this->load->view('tabregime');
+		$this->load->view('footPage');
 	}	
 	
 	public function inscription()
@@ -30,6 +34,9 @@ class Welcome extends CI_Controller {
 	}
 
 	public function accueil(){
-		$this->load->view('accueil');
+		$this->load->view('headPage');
+		$this->load->view('nav1');
+		$this->load->view('nav2');
+		$this->load->view('footPage');
 	}
 }

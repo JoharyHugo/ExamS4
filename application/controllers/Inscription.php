@@ -48,7 +48,7 @@ class Inscription extends CI_Controller {
             $this->session->set_userdata('idUser', $idUser);
             $this->session->set_userdata('nom', $nom);
 
-            $this->load->view('accueil');		
+            $this->load->view('objetifUser');		
 
 			//redirect("./accueil/index");
 		}

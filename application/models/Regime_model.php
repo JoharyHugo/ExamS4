@@ -6,7 +6,7 @@
         {
             $sql = "SELECT * FROM ObjectifUser WHERE idUser= %d ";
             $sql = sprintf($sql,$idUser);
-            echo $sql;
+            //echo $sql;
             $query = $this->db->query($sql);
 
             $row = $query->row_array();
@@ -21,7 +21,7 @@
             }
             $sql = "SELECT * FROM V_RegimeSakafoComplet WHERE idObjectif= %d  and p1<=%d and p2>=%d";
             $sql = sprintf($sql,$idObjectif,$poids,$poids);
-            echo $sql;
+           // echo $sql;
             $query = $this->db->query($sql);
             $liste=array();
             foreach($query->result_array() as $row){
@@ -35,7 +35,7 @@
         {
             $sql = "SELECT * FROM  V_RegimeSportComplet WHERE idRegime=%d";
             $sql = sprintf($sql,$idRegime);
-            echo $sql;
+            //echo $sql;
             $query = $this->db->query($sql);
             $liste=array();
             foreach($query->result_array() as $row){

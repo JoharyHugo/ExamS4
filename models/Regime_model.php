@@ -16,6 +16,9 @@
         }
         public function getRegimeSpecifique($idObjectif,$poids)
         {
+            if ($idObjectif==0) {
+               throw new Exception("vous n'avez pas encore inserer votre objectif");
+            }
             $sql = "SELECT * FROM V_RegimeSakafoComplet WHERE idObjectif= %d  and p1<=%d and p2>=%d";
             $sql = sprintf($sql,$idObjectif,$poids,$poids);
             echo $sql;

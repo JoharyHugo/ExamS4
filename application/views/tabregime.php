@@ -62,6 +62,7 @@
               </div>
             </div>
           </div>
+          <p><a href="<?php echo site_url('regime/tableauPdf'); ?>">Voir pdf</a></p>
           <!-- content-wrapper ends -->
           <!-- partial:../../partials/_footer.html -->
           <footer class="footer">

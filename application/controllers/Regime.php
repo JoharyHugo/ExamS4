@@ -24,15 +24,19 @@ class Regime extends CI_Controller {
         $this->load->model("regime_model", "model");
 		$idUser=$this->session->userdata('id');
         $Apropos= $this->model->getIdObjectif($idUser);
-       $regime= $this->model->getRegimeSpecifique($Apropos['idObjectif'],$Apropos['poids']);
-	   $sport=$this->model-> getSportSpecifique($regime[0]['idRegime']);
-	   
-	   $data['regime']=$regime;
-       $data['sport']=$sport;
-		$this->load->view('headPage');
-		$this->load->view('nav1');
-		$this->load->view('nav2');
-		$this->load->view('tabregime',$data);
-		$this->load->view('footPage');
+		try {
+			$regime= $this->model->getRegimeSpecifique($Apropos['idObjectif'],$Apropos['poids']);
+			$sport=$this->model-> getSportSpecifique($regime[0]['idRegime']);
+			
+			$data['regime']=$regime;
+			$data['sport']=$sport;
+			 $this->load->view('headPage');
+			 $this->load->view('nav1');
+			 $this->load->view('nav2');
+			 $this->load->view('tabregime',$data);
+			 $this->load->view('footPage');
+		} catch (Exception $e) {
+			echo $e->getMessage();
+		}
 	}    	
 }

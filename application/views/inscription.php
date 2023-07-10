@@ -20,7 +20,7 @@
             <!-- <img src="images/signup-bg.jpg" alt=""> -->
             <div class="container">
                 <div class="signup-content">
-                    <form action="#" method="POST" id="signup-form" class="signup-form">
+                    <form action="<?php echo site_url('Welcome/accueil');?>" method="POST" id="signup-form" class="signup-form">
                         <h2 class="form-title">Create account</h2>
                         <div class="form-group">
                             <input type="text" class="form-input" name="name" id="name" placeholder="Your Name"/>
@@ -29,10 +29,21 @@
                             <input type="email" class="form-input" name="email" id="email" placeholder="Your Email"/>
                         </div>
                         <div class="form-group">
-                            <input type="password" class="form-input" name="password" id="password" placeholder="Password"/>
-                           
+                            <input type="password" class="form-input" name="password" id="password" placeholder="Password"/>                           
+                        </div> 
+                        <div class="form-group">
+                            <select class="form-input" name="gender" id="gender">
+                                <option>votre genre</option>
+                                <option value="homme">Homme</option>
+                                <option value="femme">Femme</option>
+                            </select>
                         </div>
-
+                        <div class="form-group">
+                            <input type="number" class="form-input" name="taille" id="email" placeholder="votre taille"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="number" class="form-input" name="poids" id="password" placeholder="votre poids"/>                           
+                        </div>
                         <div class="form-group">
                             <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
                             <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
@@ -40,6 +51,7 @@
                         <div class="form-group">
                             <input type="submit" name="submit" id="submit" class="form-submit" value="Sign up"/>
                         </div>
+
                     </form>
                     <p class="loginhere">
                         Have already an account ? <a href="<?php echo site_url('Welcome/index'); ?>" class="loginhere-link">Login here</a>

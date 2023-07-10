@@ -20,11 +20,13 @@
                           </tr>
                         </thead>
                         <tbody>
+                        <?php for ($i=0; $i < count($regime); $i++) { ?>
                           <tr>
-                            <td> Soupe</td>
-                            <td> 450</td>
-                            <td> <img src="<?php echo base_url("assets/images/img/targa-photo.png");?>" alt="xxx" style=" width: 70px; height: 70px; "> </td>
+                            <td><?php echo $regime[$i]['NomSakafo']; ?></td>
+                            <td><?php echo $regime[$i]['quantite']; ?></td>
+                            <td> <img src="<?php echo base_url("assets/img/".$regime[$i]['photo']);?>" alt="xxx" style=" width: 70px; height: 70px; "> </td>
                           </tr>
+                          <?php } ?>
                         </tbody>
                       </table>
                     </div>
@@ -45,10 +47,13 @@
                           </tr>
                         </thead>
                         <tbody>
+                          
+                        <?php for ($j=0; $j < count($sport); $j++) { ?>
                           <tr>
-                            <td>Fouting</td>
-                            <td>30 Min</td>
+                            <td><?php echo $sport[$j]['NomSport']; ?></td>
+                            <td><?php echo $sport[$j]['duree']; ?></td>
                           </tr>
+                          <?php } ?>
                         </tbody>
                       </table>
                     </div>

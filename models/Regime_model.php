@@ -20,11 +20,10 @@
             $sql = sprintf($sql,$idObjectif,$poids,$poids);
             echo $sql;
             $query = $this->db->query($sql);
-            $liste=array();
-            foreach($query->result_array() as $row){
-             $liste[]=$row;
-            }
-            return $liste;
+
+            $row = $query->row_array();
+
+            return $row;
 
         }   
 
@@ -34,11 +33,10 @@
             $sql = sprintf($sql,$idRegime);
             echo $sql;
             $query = $this->db->query($sql);
-            $liste=array();
-            foreach($query->result_array() as $row){
-             $liste[]=$row;
-            }
-            return $liste;
+
+            $row = $query->row_array();
+
+            return $row;
 
         }   
 

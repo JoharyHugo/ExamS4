@@ -18,21 +18,32 @@ class Regime extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
-
-    public function tabRegime()
+	public function getIdObjectifPoids($idUser)
 	{
         $this->load->model("regime_model", "model");
-		$idUser=$this->session->userdata('id');
+        $idUser=$this->session->userdata('id');
+        
         $Apropos= $this->model->getIdObjectif($idUser);
-       $regime= $this->model->getRegimeSpecifique($Apropos['idObjectif'],$Apropos['poids']);
-	   $sport=$this->model-> getSportSpecifique($regime[0]['idRegime']);
-	   
-	   $data['regime']=$regime;
-       $data['sport']=$sport;
-		$this->load->view('headPage');
-		$this->load->view('nav1');
-		$this->load->view('nav2');
-		$this->load->view('tabregime',$data);
-		$this->load->view('footPage');
-	}    	
+        $data['poids'] = $Apropos;
+		
+        $this->load->view('accueil', $data);
+	}	
+
+    public function getRegimeSpecifique($idObjectif,$poids)
+	{
+        $this->load->model("regime_model", "model");
+        $this->model->getRegimeSpecifique(1,30);
+        $this->load->view('accueil');
+    
+
+	}
+    	
+    public function getSportSpecifique($idRegime)
+	{
+        $this->load->model("regime_model", "model");
+        $this->model-> getSportSpecifique(1);
+    
+        $this->load->view('accueil');
+    
+	}	
 }

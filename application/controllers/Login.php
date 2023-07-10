@@ -14,7 +14,11 @@ class Login extends CI_Controller{
           $this->session->set_userdata('id', $donne['idUser']);
            $this->session->set_userdata('nom', $nom);
             $data['objectif']=$this->objectif->getAllObjectif();
+            $this->load->view('headPage');
+            $this->load->view('nav1');
+            $this->load->view('nav2');
             $this->load->view('objectifForm',$data);
+            $this->load->view('footPage');
 
         } catch (Exception $e) {
             $message=$e->getMessage();

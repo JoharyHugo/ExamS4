@@ -11,7 +11,22 @@ class Objectif extends CI_Controller {
         $this->model->deleteObjectifUser($idUser);
         $this->model-> insertObjectif($idUser,$idObjectif,$pois);
         $data['objectif']=$this->model->getAllObjectif();
+
+        $this->load->view('headPage');
+        $this->load->view('nav1');
+        $this->load->view('nav2');
         $this->load->view('objectifForm',$data);
+        $this->load->view('footPage');
+    }
+    public function formpoid()
+    {
+        $this->load->model('Objectif_model','model');
+        $data['objectif']=$this->model->getAllObjectif();
+        $this->load->view('headPage');
+        $this->load->view('nav1');
+        $this->load->view('nav2');
+        $this->load->view('objectifForm',$data);
+        $this->load->view('footPage');
     }
 
 }

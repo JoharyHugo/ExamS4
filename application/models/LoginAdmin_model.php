@@ -6,6 +6,7 @@ class LoginAdmin_model extends CI_Model{
     {
         $sql="SELECT * FROM Admin WHERE nom= '%s' AND mdp='%s' ";
         $sql=sprintf($sql,$nom,$mdp);
+        echo $sql;
         $query = $this->db->query($sql);
 
         $row = $query->row_array();

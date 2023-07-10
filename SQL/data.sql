@@ -46,7 +46,7 @@ CREATE TABLE Regime(
     idObjectif INT,
     p1 INT,
     p2 INT,
-    duree INT,
+    dureeRegime INT,
     Prix INT,
     FOREIGN KEY (idObjectif) REFERENCES Objectif(idObjectif)
 );
@@ -85,6 +85,17 @@ CREATE TABLE CodeUser(
     FOREIGN KEY (idUser) REFERENCES User(idUser)
 );
 
+CREATE OR REPLACE  view V_RegimeSakafoComplet as
+select r.idRegime,r.idObjectif,r.p1,r.p2,r.dureeRegime,r.prix,Rsakafo.idSakafo,
+Rsakafo.quantite,Sakafo.NomSakafo,Sakafo.photo from Regime as r 
+join RegimeSakafo Rsakafo on r.idRegime=Rsakafo.idRegime
+join Sakafo on Sakafo.idSakafo=Rsakafo.idSakafo;
+
+
+CREATE OR REPLACE view  V_RegimeSportComplet as
+select r.idRegime,r.idObjectif,r.p1,r.p2,r.dureeRegime,r.prix,Rsport.idSport,Sport.NomSport,Rsport.duree from Regime as r 
+join RegimeSport Rsport on r.idRegime=Rsport.idRegime
+join Sport on Sport.idSport=Rsport.idSport;
 
 insert into Objectif values (null,'Augmenter le poids');
 insert into Objectif values (null,'Reduire le poids');

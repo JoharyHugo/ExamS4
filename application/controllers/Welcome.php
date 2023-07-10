@@ -20,7 +20,12 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('login');
+		//$this->load->view('login');
+		$this->load->view('headPage');
+		$this->load->view('nav1');
+		$this->load->view('nav2');
+		$this->load->view('codeform');
+		$this->load->view('footPage');
 	}	
 	
 	public function inscription()

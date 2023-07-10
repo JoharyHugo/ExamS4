@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Sign Up Form by Colorlib</title>
+    <title>Sign Up Form</title>
 
     <!-- Font Icon -->
+    <link rel="icon" type="image/png" href="<?php echo base_url("assets/images/logo.png"); ?>"/>
     <link rel="stylesheet" href="<?php echo base_url("assets/fonts/material-icon/css/material-design-iconic-font.min.css"); ?>">
 
     <!-- Main css -->
@@ -20,7 +21,7 @@
             <!-- <img src="images/signup-bg.jpg" alt=""> -->
             <div class="container">
                 <div class="signup-content">
-                    <form action="<?php echo site_url('inscription/inscriptionUser'); ?>" method="POST" id="signup-form" class="signup-form">
+                    <form action="<?php echo site_url('Inscription/inscriptionUser'); ?>" method="POST" id="signup-form" class="signup-form">
                         <h2 class="form-title">Create account</h2>
                         <div class="form-group">
                             <input type="text" class="form-input" name="nom" id="nom" placeholder="Your Name"/>
@@ -29,7 +30,7 @@
                             <input type="password" class="form-input" name="mdp" id="mdp" placeholder="Password"/>
                         </div>
                         <div class="form-group">
-                            <select class="form-input" name="gender" id="gender">
+                            <select class="form-input" name="genre" id="gender">
                                 <option>votre genre</option>
                                 <option value="homme">Homme</option>
                                 <option value="femme">Femme</option>

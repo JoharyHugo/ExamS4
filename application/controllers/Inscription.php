@@ -21,7 +21,7 @@ class Inscription extends CI_Controller {
 	public function index()
 	{
 //		$this->load->view('login');
-        $this->load->view('inscription');		
+        	$this->load->view('inscription');		
 	}	
     	// Inscription nouveau client
 	public function inscriptionUser()
@@ -41,14 +41,14 @@ class Inscription extends CI_Controller {
 			$this->model->inscription($nom, $mdp, $genre, $taille,$poids);
 	
 			$test = $this->model->getIdFarany($nom);
-	        $idUser=$test['idUser'];
+	        	$idUser=$test['idUser'];
 			echo $idUser;
 			$nom=$test['nom'];
 		   //echo $nom;
-            $this->session->set_userdata('id', $idUser);
-            $this->session->set_userdata('nom', $nom);
+            		$this->session->set_userdata('id', $idUser);
+            		$this->session->set_userdata('nom', $nom);
 
-            $this->load->view('objetifUser');		
+            		$this->load->view('objectifUser');		
 
 			//redirect("./accueil/index");
 		}

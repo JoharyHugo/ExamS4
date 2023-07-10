@@ -14,7 +14,7 @@ CREATE TABLE User(
     genre VARCHAR(20),
     taille INT,
     poid INT,
-    compte INT,
+    compte INT
 );
 CREATE TABLE Objectif(
     idObjectif INT PRIMARY KEY Auto_increment,
@@ -81,3 +81,4 @@ CREATE TABLE CodeUser(
     FOREIGN KEY (idUser) REFERENCES User(idUser)
 );
 
+INSERT INTO User VALUES (null,'Nirina','huhu','Homme',170,65,0);

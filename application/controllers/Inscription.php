@@ -42,10 +42,10 @@ class Inscription extends CI_Controller {
 	
 			$test = $this->model->getIdFarany($nom);
 	        $idUser=$test['idUser'];
-			//echo $idUser;
+			echo $idUser;
 			$nom=$test['nom'];
 		   //echo $nom;
-            $this->session->set_userdata('idUser', $idUser);
+            $this->session->set_userdata('id', $idUser);
             $this->session->set_userdata('nom', $nom);
 
             $this->load->view('accueil');		

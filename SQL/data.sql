@@ -72,7 +72,8 @@ CREATE TABLE RegimeSport(
 CREATE TABLE Code(
     idCode INT PRIMARY KEY Auto_increment,
     code VARCHAR(15),
-    prix INT
+    prix INT,
+    etat INT
 );
 
 
@@ -97,6 +98,10 @@ select r.idRegime,r.idObjectif,r.p1,r.p2,r.dureeRegime,r.prix,Rsport.idSport,Spo
 join RegimeSport Rsport on r.idRegime=Rsport.idRegime
 join Sport on Sport.idSport=Rsport.idSport;
 
+ select *from V_RegimeSakafoComplet where idObjectif=1 and p1<=9 and p2>=10
+
+select *from V_RegimeSakafoComplet where idObjectif=1 and p1<=9 and p2>=10;
+select *from V_RegimeSakafoComplet where idObjectif=1 and p1<=9 and p2>=10
 insert into Objectif values (null,'Augmenter le poids');
 insert into Objectif values (null,'Reduire le poids');
 
@@ -128,18 +133,18 @@ insert into RegimeSport values(1,2,20);
 insert into RegimeSport values(2,1,30);
 insert into RegimeSport values(3,3,60);
 
-insert into code values(null,'1000123456',1000);
-insert into code values(null,'2000780123',2000);
-insert into code values(null,'5000456789',5000);
-insert into code values(null,'1000012345',10000);
-insert into code values(null,'2000067890',20000);
-insert into code values(null,'3000123456',3000);
-insert into code values(null,'4000789012',4000);
-insert into code values(null,'6000345678',6000);
-insert into code values(null,'7000901234',7000);
-insert into code values(null,'8000567890',8000);
-insert into code values(null,'5001234567',500);
-insert into code values(null,'9000890123',9000);
-insert into code values(null,'1000004567',100000);
-insert into code values(null,'2500089012',25000);
-insert into code values(null,'3000034567',30000);
+insert into code values(null,'1000123456',1000,0);
+insert into code values(null,'2000780123',2000,0);
+insert into code values(null,'5000456789',5000,0);
+insert into code values(null,'1000012345',10000,0);
+insert into code values(null,'2000067890',20000,0);
+insert into code values(null,'3000123456',3000,0);
+insert into code values(null,'4000789012',4000,0);
+insert into code values(null,'6000345678',6000,0);
+insert into code values(null,'7000901234',7000,0);
+insert into code values(null,'8000567890',8000,0);
+insert into code values(null,'5001234567',500,0);
+insert into code values(null,'9000890123',9000,0);
+insert into code values(null,'1000004567',100000,0);
+insert into code values(null,'2500089012',25000,0);
+insert into code values(null,'3000034567',30000,0);

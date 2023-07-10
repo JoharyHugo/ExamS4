@@ -6,13 +6,19 @@ class Code extends CI_Controller{
     {
         $this->load->model('Code_model','model');
         $data['code']=$this->model->getAllCode();
-        $this->load->view('codeForm',$data);
+        
+        $this->load->view('headPage');
+		$this->load->view('nav1');
+		$this->load->view('nav2');
+		$this->load->view('codeForm',$data);
+		$this->load->view('footPage');
     }
 
     public function insertionCode()
     {
         $this->load->model('Code_model','model');
         $code=$this->input->post('code');
+        echo $code;
         $idUser=$this->session->userdata('id');
         try {
             $codes=$this->model->verificationcode($code);
@@ -20,6 +26,7 @@ class Code extends CI_Controller{
             redirect("Code/codeForm");
         } catch (Exception $e) {
            echo $e->getMessage();
+           echo $code;
         }
     }
 }

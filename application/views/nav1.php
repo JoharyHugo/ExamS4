@@ -8,7 +8,7 @@
             <div class="profile-desc">
               <div class="profile-pic">
                 <div class="count-indicator">
-                  <img class="img-xs rounded-circle " src="<?php echo base_url("assets/images/faces/face15.jpg");?>" alt="">
+                  <img class="img-xs rounded-circle " src="<?php echo base_url("assets/images/faces/face15.jpg");?>" alt=""> a
                   <span class="count bg-success"></span>
                 </div>
                 <div class="profile-name">
@@ -57,7 +57,7 @@
             <span class="nav-link">Navigation</span>
           </li>
           <li class="nav-item menu-items">
-            <a class="nav-link" href="<?php echo site_url('') ?>">
+            <a class="nav-link" href="<?php echo site_url('Objectif/formpoid'); ?>">
               <span class="menu-icon">
                 <i class="mdi mdi-speedometer"></i>
               </span>
@@ -65,7 +65,7 @@
             </a>
           </li>
           <li class="nav-item menu-items">
-            <a class="nav-link" href="pages/forms/basic_elements.html">
+            <a class="nav-link" href="<?php echo site_url('Code/codeForm'); ?>">
               <span class="menu-icon">
                 <i class="mdi mdi-playlist-play"></i>
               </span>

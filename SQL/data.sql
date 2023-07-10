@@ -109,10 +109,27 @@ insert into ObjectifUser values(1,2,20);
 insert into ObjectifUser values(2,1,10);
 
 
-insert into Sakafo values(null,'humbergeur','humbergeur.jpg');
-insert into Sakafo values(null,'salade de fruit','salade de fruit.jpg');
-insert into Sakafo values(null,'salade de pate','salade de pate.jpg');
-insert into Sakafo values(null,'pomme','pomme.jpg');
+insert into Sakafo values(null,'sakafo1','sary1.jpg');
+insert into Sakafo values(null,'sakafo2','sary2.jpg');
+insert into Sakafo values(null,'sakafo3','sary3.jpg');
+insert into Sakafo values(null,'sakafo4','sary4.jpg');
+insert into Sakafo values(null,'sakafo5','sary5.jpg');
+insert into Sakafo values(null,'fruit','sary6.jpg');
+insert into Sakafo values(null,'sakafo7','sary7.jpg');
+insert into Sakafo values(null,'sakafo8','sary8.jpg');
+insert into Sakafo values(null,'sakafo9','sary9.jpg');
+insert into Sakafo values(null,'sakafo10','sary10.jpg');
+insert into Sakafo values(null,'sakafo11','sary11.jpg');
+insert into Sakafo values(null,'sakafo4','sary12.jpg');
+insert into Sakafo values(null,'sakafo5','sary13.jpg');
+insert into Sakafo values(null,'sakafo6','sary14.jpg');
+insert into Sakafo values(null,'sakafo7','sary15.jpg');
+insert into Sakafo values(null,'sakafo8','sary16.jpg');
+insert into Sakafo values(null,'sakafo4','sary17.jpg');
+insert into Sakafo values(null,'humbergeurr','sary18.jpg');
+insert into Sakafo values(null,'pizza','sary19.jpg');
+insert into Sakafo values(null,'sakafo7','sary20.jpg');
+
 
 insert into Sport values(null,'abdomino');
 insert into Sport values(null,'vitesse');

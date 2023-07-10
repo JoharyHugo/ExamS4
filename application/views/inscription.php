@@ -20,17 +20,14 @@
             <!-- <img src="images/signup-bg.jpg" alt=""> -->
             <div class="container">
                 <div class="signup-content">
-                    <form action="<?php echo site_url('Welcome/accueil');?>" method="POST" id="signup-form" class="signup-form">
+                    <form action="<?php echo site_url('inscription/inscriptionUser'); ?>" method="POST" id="signup-form" class="signup-form">
                         <h2 class="form-title">Create account</h2>
                         <div class="form-group">
-                            <input type="text" class="form-input" name="name" id="name" placeholder="Your Name"/>
+                            <input type="text" class="form-input" name="nom" id="nom" placeholder="Your Name"/>
                         </div>
                         <div class="form-group">
-                            <input type="email" class="form-input" name="email" id="email" placeholder="Your Email"/>
-                        </div>
-                        <div class="form-group">
-                            <input type="password" class="form-input" name="password" id="password" placeholder="Password"/>                           
-                        </div> 
+                            <input type="password" class="form-input" name="mdp" id="mdp" placeholder="Password"/>
+                        </div>    
                         <div class="form-group">
                             <select class="form-input" name="gender" id="gender">
                                 <option>votre genre</option>
@@ -43,7 +40,7 @@
                         </div>
                         <div class="form-group">
                             <input type="number" class="form-input" name="poids" id="password" placeholder="votre poids"/>                           
-                        </div>
+                        </div>                    
                         <div class="form-group">
                             <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
                             <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>

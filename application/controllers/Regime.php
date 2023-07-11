@@ -21,6 +21,7 @@ class Regime extends CI_Controller {
 
     public function tabRegime()
 	{
+		
         $this->load->model("regime_model", "model");
 		$idUser=$this->session->userdata('id');
         $Apropos= $this->model->getIdObjectif($idUser);

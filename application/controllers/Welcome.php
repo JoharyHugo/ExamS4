@@ -29,13 +29,7 @@ class Welcome extends CI_Controller {
 		$this->load->view('inscription');
 	}
 
-	public function accueil(){
-		$this->load->view('headPage');
-		$this->load->view('nav1');
-		$this->load->view('nav2');
-		$this->load->view('footPage');
-	}
-
+	
 	public function admin()
 	{
 		$this->load->view('loginAdmin');

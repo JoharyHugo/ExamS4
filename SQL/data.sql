@@ -86,6 +86,11 @@ CREATE TABLE CodeUser(
     FOREIGN KEY (idUser) REFERENCES User(idUser)
 );
 
+CREATE OR REPLACE VIEW V_CodeClient as 
+SELECT cu.idCodeUser,c.idCode,c.code,c.prix,cu.idUser,cu.etat,u.nom FROM Code c
+join CodeUser cu ON  c.idCode=cu.idCode
+join User u ON u.idUser=cu.idUser;
+
 CREATE OR REPLACE  view V_RegimeSakafoComplet as
 select r.idRegime,r.idObjectif,r.p1,r.p2,r.dureeRegime,r.prix,Rsakafo.idSakafo,
 Rsakafo.quantite,Sakafo.NomSakafo,Sakafo.photo from Regime as r 

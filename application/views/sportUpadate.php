@@ -29,7 +29,7 @@
 				<img src="<?php echo base_url("assets/img/sport.jpg"); ?>" alt="IMG">
 			</div>
 
-			<form class="contact1-form validate-form" enctype="multipart/form-data">
+			<form class="contact1-form validate-form" >
 				<span class="contact1-form-title">
 					Update Sport
 				</span>

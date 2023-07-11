@@ -49,5 +49,27 @@ class Code extends CI_Controller{
             echo $code;
          } 
     }
+
+    public function alldemande()
+    {
+        $this->load->model('Code_model','model');
+        $data['demandes']=$this->model->getAllCodeInvalidate();
+        $this->load->view('headerAdmin');
+		$this->load->view('navbarAdmin');
+		$this->load->view('demande',$data);
+		$this->load->view('footerAdmin');
+    }
+    public function updatecode()
+    {
+       $idCodeUser=$this->input->get('idCodeUser');
+       $idcode=$this->input->get('idcode');
+       $idUser=$this->input->get('iduser');
+       $prix=$this->input->get('prix');
+       $this->load->model('Code_model','model');
+       $this->model->updateCodeUSer($idCodeUser);
+       $this->model->updateEtatCode($idcode);
+       $this->model->UpdateCompte($idUser,$prix);
+       redirect("Code/alldemande");
+    }
 }
 ?>

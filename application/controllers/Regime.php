@@ -21,10 +21,10 @@ class Regime extends CI_Controller {
 
     public function tabRegime()
 	{
-		
-        $this->load->model("regime_model", "model");
+		$this->load->model("regime_model", "model");
 		$idUser=$this->session->userdata('id');
-        $Apropos= $this->model->getIdObjectif($idUser);
+       try {
+		$Apropos= $this->model->getIdObjectif($idUser);
        $regime= $this->model->getRegimeSpecifique($Apropos['idObjectif'],$Apropos['poids']);
 	   $sport=$this->model-> getSportSpecifique($regime[0]['idRegime']);
 	   
@@ -35,7 +35,12 @@ class Regime extends CI_Controller {
 		$this->load->view('nav2');
 		$this->load->view('tabregime',$data);
 		$this->load->view('footPage');
+	   }catch (Exception $e) {
+		$message=$e->getMessage();
+		echo $message;
+		
 	} 
+    }
 	
 	public function tableauPdf()
 	{

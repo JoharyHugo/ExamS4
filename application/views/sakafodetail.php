@@ -1,5 +1,5 @@
 <style>
-    button{
+    #regime{
         background-color:#00e950;
         color: white;
         width: 178px;
@@ -19,7 +19,7 @@
                                 <!-- TOP CAMPAIGN-->
                                 <div class="top-campaign">
                                     <h3 class="title-3 m-b-30">CRUD Regime</h3>
-                                    <button  > + Creation New Regime </button>
+                                    <button id="regime" > + Creation New Regime </button>
                                     <div class="table-responsive">
                                         <table class="table table-top-campaign">
                                             <tbody>

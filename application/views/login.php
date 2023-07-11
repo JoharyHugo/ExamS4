@@ -13,15 +13,15 @@
 
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url("assets/fonts/iconic/css/material-design-iconic-font.min.css");?>">
 
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url("assets/vendors/animate/animate.css");?>">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url("assets/vendor/animate/animate.css");?>">
 	
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url("assets/vendors/css-hamburgers/hamburgers.min.css");?>">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url("assets/vendor/css-hamburgers/hamburgers.min.css");?>">
 
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url("assets/vendor/animsition/css/animsition.min.css");?>">    
 
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url("assets/vendors/select2/select2.min.css");?>">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url("assets/vendor/select2/select2.min.css");?>">
 	
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url("assets/vendors/daterangepicker/daterangepicker.css");?>">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url("assets/vendor/daterangepicker/daterangepicker.css");?>">
 
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url("assets/login/css/util.css");?>">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url("assets/login/css/main.css");?>">
@@ -107,19 +107,19 @@
 	<div id="dropDownSelect1"></div>
 	
 <!--===============================================================================================-->
-	<script src="<?php echo base_url("assets/vendors/jquery/jquery-3.2.1.min.js");?>"></script>
+	<script src="<?php echo base_url("assets/vendor/jquery/jquery-3.2.1.min.js");?>"></script>
 <!--===============================================================================================-->
-	<script src="<?php echo base_url("assets/vendors/animsition/js/animsition.min.js");?>"></script>
+	<script src="<?php echo base_url("assets/vendor/animsition/js/animsition.min.js");?>"></script>
 <!--===============================================================================================-->
-	<script src="<?php echo base_url("assets/vendors/bootstrap/js/popper.js");?>"></script>
-	<script src="<?php echo base_url("assets/vendors/bootstrap/js/bootstrap.min.js");?>"></script>
+	<script src="<?php echo base_url("assets/vendor/bootstrap/js/popper.js");?>"></script>
+	<script src="<?php echo base_url("assets/vendor/bootstrap/js/bootstrap.min.js");?>"></script>
 <!--===============================================================================================-->
-	<script src="<?php echo base_url("assets/vendors/select2/select2.min.js");?>"></script>
+	<script src="<?php echo base_url("assets/vendor/select2/select2.min.js");?>"></script>
 <!--===============================================================================================-->
-	<script src="<?php echo base_url("assets/vendors/daterangepicker/moment.min.js");?>"></script>
-	<script src="<?php echo base_url("assets/vendors/daterangepicker/daterangepicker.js");?>"></script>
+	<script src="<?php echo base_url("assets/vendor/daterangepicker/moment.min.js");?>"></script>
+	<script src="<?php echo base_url("assets/vendor/daterangepicker/daterangepicker.js");?>"></script>
 <!--===============================================================================================-->
-	<script src="<?php echo base_url("assets/vendors/countdowntime/countdowntime.js");?>"></script>
+	<script src="<?php echo base_url("assets/vendor/countdowntime/countdowntime.js");?>"></script>
 <!--===============================================================================================-->
 	<script src="<?php echo base_url("assets/login/js/main.js");?>"></script>
 

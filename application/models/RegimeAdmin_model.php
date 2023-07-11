@@ -5,7 +5,7 @@
         public function getAllRegime()
         {
             $sql = "SELECT * FROM Regime";
-            echo $sql;
+           // echo $sql;
             $query = $this->db->query($sql);
             $liste=array();
             foreach($query->result_array() as $row){

@@ -20,23 +20,26 @@
             <!-- <img src="images/signup-bg.jpg" alt=""> -->
             <div class="container">
                 <div class="signup-content">
-                    <form action="<?php echo site_url('inscription/inscriptionUser'); ?>" method="POST" id="signup-form" class="signup-form">
-                        <h2 class="form-title">Choix du regime</h2>
+                    <form action="<?php echo site_url('inscription/inscriptionInfoUser'); ?>" method="POST" id="signup-form" class="signup-form">
+                        <h2 class="form-title">Votre information</h2>
                         <div class="form-group">
-                            <input type="checkbox" name="perte-poids" id="agree-term" class="agree-term" value="1"/>
-                            <label for="perte-poids" class="label-checkbox">Perdre du poids</label>
+                            <input type="text" class="form-input" name="taille" id="taille" placeholder="Taille"/>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="text" class="form-input" name="poids" id="poids" placeholder="Poids"/>
                         </div>
                         <div class="form-group">
-                            <input type="checkbox" name="prise-poids" id="agree-term" class="agree-term" value="2"/>
-                            <label for="prise-poids" class="label-checkbox">Prendre du poids</label>
-                        </div> 
+                            <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
+                            <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
+                        </div>
                         <div class="form-group">
-                            <input type="submit" name="submit" id="submit" class="form-submit" value="valider"/>
+                            <input type="submit" name="submit" id="submit" class="form-submit" value="Sign up"/>
                         </div>
                     </form>
-                  <!--   <p class="loginhere">
+                    <p class="loginhere">
                         Have already an account ? <a href="<?php echo site_url('Welcome/index'); ?>" class="loginhere-link">Login here</a>
-                    </p> -->
+                    </p>
                 </div>
             </div>
         </section>

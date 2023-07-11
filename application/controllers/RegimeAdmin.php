@@ -18,10 +18,14 @@ class RegimeAdmin extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
-	public function index()
-	{
-		$this->load->view('login');
-		
-	}	
-	
+
+    public function deleteRegime($idRegime)
+    {
+        $this->load->model("RegimeAdmin_model", "model");
+        $this->model->deleteRegime($idRegime);
+
+        redirect("sakafoAdmin/getAllFood");
+    }
+
+   
 }

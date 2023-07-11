@@ -28,21 +28,16 @@
                                             <tr>
                                                 <th>Nom</th>
                                                 <th>Code</th>
-                                                <th>Prix</th>
-                                                <th>Valider</th>
+                                                 <th>Valider</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <?php for ($i=0; $i <count($demandes) ; $i++) { ?>
-                                               
-                                              
                                             <tr>
-                                                <td><?php echo $demandes[$i]['nom']; ?></td>
-                                                <td><?php echo $demandes[$i]['code']; ?></td>
-                                                <td><?php echo $demandes[$i]['prix']; ?></td>
-                                                <td><a href="<?php echo site_url('Code/updatecode?idCodeUser='. urlencode($demandes[$i]['idCodeUser']) . '&idcode='. urlencode($demandes[$i]['idCode']) . '&iduser=' . urlencode($demandes[$i]['idUser']) .'&prix=' . urlencode($demandes[$i]['prix'] ) );?>">Valider</a></td>
+                                                <td>Hugo</td>
+                                                <td>100398</td>
+                                                <td><a href="#">Valider</a></td>
                                             </tr>
-                                            <?php   } ?>
+                                            
                                         </tbody>
                                     </table>
                                 </div>

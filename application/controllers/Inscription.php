@@ -23,22 +23,20 @@ class Inscription extends CI_Controller {
 //		$this->load->view('login');
         $this->load->view('inscription');		
 	}	
-    	// Inscription nouveau client
+    	
+	// Inscription nouveau client
 	public function inscriptionUser()
 	{
 		$nom = $this->input->post('nom');
 		$mdp = $this->input->post('mdp');
-		$genre = $this->input->post('genre');
-		$taille = $this->input->post('taille');
-		$poids = $this->input->post('poids');
-
-		if ($nom == "" || $mdp== "" || $genre == "" || $taille == "" || $poids == "") {
+		$genre = $this->input->post('genre');	
+		if ($nom == "" || $mdp== "" || $genre== "") {
 			$data['erreur'] = "Veillez remplir tous les champs";
 			$this->load->view('inscription', $data);
 		}
 		else {
 			$this->load->model('Inscription_model', 'model');
-			$this->model->inscription($nom, $mdp, $genre, $taille,$poids);
+			$this->model->inscription($nom, $mdp,$genre);
 	
 			$test = $this->model->getIdFarany($nom);
 	        $idUser=$test['idUser'];
@@ -48,9 +46,29 @@ class Inscription extends CI_Controller {
             $this->session->set_userdata('id', $idUser);
             $this->session->set_userdata('nom', $nom);
 
-            $this->load->view('objetifUser');		
+            $this->load->view('inscriptionUser');		
 
 			//redirect("./accueil/index");
+		}
+	}
+
+
+	
+	public function inscriptionInfoUser()
+	{
+		$taille = $this->input->post('taille');
+		$poids = $this->input->post('poids');
+		if ($taille == "" || $poids == "") {
+			$data['erreur'] = "Veillez remplir tous les champs";
+			$this->load->view('inscription', $data);
+		}
+		else {
+			$idUser=$this->session->userdata('id');
+			$this->load->model('Inscription_model', 'model');
+			$this->model->inscriptionInfoUser($idUser,$taille,$poids);
+
+			
+			redirect("objectif/formpoid");
 		}
 	}
 

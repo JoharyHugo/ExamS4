@@ -6,12 +6,12 @@ class LoginAdmin extends CI_Controller{
     public function CheckAdmin()
     {
         $this->load->model('loginAdmin_model','model');
-        $nom=$this->input->post('nom');
-        $mdp=$this->input->post('mdp');
+        $nom=$this->input->post('username');
+        $mdp=$this->input->post('pass');
         try {
           $donne= $this->model->verifAdmin($nom ,$mdp);
           $this->session->set_userdata('idAdmin', $donne['idAdmin']);
-           $this->session->set_userdata('nom', $nom);
+           $this->session->set_userdata('nomAdmin', $nom);
 
            $this->load->view('accueilAdmin');
 

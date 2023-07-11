@@ -68,7 +68,7 @@ class Regime extends CI_Controller {
     // Parcourir les enregistrements et générer le contenu du PDF
     foreach ($data['records'] as $record) {
         $pdf->Cell(40, 10, $record['NomSakafo'], 1, 0); // Modifier la sortie en fonction de votre structure de données
-        $pdf->Cell(150, 10, $record['quantite'], 1, 1);
+        $pdf->Cell(150, 10, $record['quantite'].'%', 1, 1);
     }
 
 	foreach ($data['sport'] as $sport) {

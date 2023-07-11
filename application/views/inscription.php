@@ -29,14 +29,10 @@
                             <input type="password" class="form-input" name="mdp" id="mdp" placeholder="Password"/>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-input" name="genre" id="genre" placeholder="Genre"/>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-input" name="taille" id="taille" placeholder="Taille"/>
-                        </div>
-                        
-                        <div class="form-group">
-                            <input type="text" class="form-input" name="poids" id="poids" placeholder="Poids"/>
+                            <select name="genre" id="genre">
+                                  <option value="Homme">Homme</option>
+                                  <option value="Femme">Femme</option>
+                            </select>
                         </div>
                         <div class="form-group">
                             <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
@@ -56,7 +52,7 @@
     </div>
 
     <!-- JS -->
-    <script src="<?php echo base_url("assets/vendors/jquery/jquery-3.2.1.min.js"); ?>"></script>
+    <script src="<?php echo base_url("assets/inscription/vendor/jquery/jquery.min.js"); ?>"></script>
     <script src="<?php echo base_url("assets/inscription/js/main.js"); ?>"></script>
 </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 </html>

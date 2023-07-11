@@ -29,13 +29,15 @@
 				<img src="<?php echo base_url("assets/img/sport.jpg"); ?>" alt="IMG">
 			</div>
 
-			<form class="contact1-form validate-form" >
+			<form class="contact1-form validate-form" action="<?php echo   site_url('sportAdmin/updateSport');?>" method="post">
 				<span class="contact1-form-title">
 					Update Sport
 				</span>
 
+				<input type="hidden" value="<?php  echo $idSport; ?>" name="idSport" id="duree">
+     
 				<div class="wrap-input1 validate-input" data-validate = "Name is required">
-					<input class="input1" type="text" name="name" placeholder="Nom Sakafo">
+					<input class="input1" type="text" name="nom" placeholder="Nom Sport">
 					<span class="shadow-input1"></span>
 				</div>
 

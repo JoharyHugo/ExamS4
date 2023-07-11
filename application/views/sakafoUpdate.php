@@ -3,10 +3,11 @@
 <div class="body-content">
   <div class="module">
     <h1>Update Sakafo</h1>
-    <form class="form" action="form.php" method="post" enctype="multipart/form-data" autocomplete="off">
+    <form class="form" action="<?php echo site_url('sakafoAdmin/updateSakafo'); ?>" method="post" enctype="multipart/form-data" autocomplete="off">
       <div class="alert alert-error"></div>
-      <input type="text" placeholder="Nom Sakafo" name="username" required />
-      <div class="avatar"><label>Select your photo: </label><input type="file" name="avatar" accept="image/*" required /></div>
+      <input type="hidden" value="<?php echo $idSakafo; ?>" name="idSakafo" id="idSakafo">
+      <input type="text" placeholder="Nom Sakafo" name="nom" required />
+      <div class="avatar"><label>Select your photo: </label><input type="file" name="file" accept="image/*" required /></div>
       <input type="submit" value="Register" name="register" class="btn btn-block btn-primary" />
     </form>
   </div>

@@ -23,7 +23,7 @@
                         <?php for ($i=0; $i < count($regime); $i++) { ?>
                           <tr>
                             <td><?php echo $regime[$i]['NomSakafo']; ?></td>
-                            <td><?php echo $regime[$i]['quantite']; ?></td>
+                            <td><?php echo $regime[$i]['quantite']; ?> %</td>
                             <td> <img src="<?php echo base_url("assets/img/".$regime[$i]['photo']);?>" alt="xxx" style=" width: 70px; height: 70px; "> </td>
                           </tr>
                           <?php } ?>
@@ -57,7 +57,7 @@
                         <?php for ($j=0; $j < count($sport); $j++) { ?>
                           <tr>
                             <td><?php echo $sport[$j]['NomSport']; ?></td>
-                            <td><?php echo $sport[$j]['duree']; ?></td>
+                            <td><?php echo $sport[$j]['duree']; ?> min</td>
                           </tr>
                           <?php } ?>
                         </tbody>

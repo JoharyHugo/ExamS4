@@ -29,7 +29,9 @@ class Login extends CI_Controller{
 	public function deconnectClient()
 	{
 		$this->session->unset_userdata('id');
-		$this->load->view('login');
+		
+        redirect("welcome/index");
+        
 	}
     
 }

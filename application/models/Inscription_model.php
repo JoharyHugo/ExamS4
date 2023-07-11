@@ -14,10 +14,10 @@
             return $row;
 
         }   
-        public function inscription($nom, $mdp,$genre,$taille, $poids)
+        public function inscription($nom, $mdp,$genre)
         {  
-           $sql="insert into User values(null,'%s','%s','%s',%d,%d,0)";
-           $sql=sprintf($sql,$nom, $mdp,$genre,$taille, $poids);
+           $sql="insert into User values(null,'%s','%s','%s')";
+           $sql=sprintf($sql,$nom, $mdp,$genre);
            try {
            $this->db->query($sql);
            //echo $sql;
@@ -26,5 +26,18 @@
            }
         }
         
+
+        public function inscriptionInfoUser($idUser,$poid,$taille)
+        {  
+           $sql="insert into InfoUser values(%d,%d,%d,0)";
+           $sql=sprintf($sql,$idUser,$poid,$taille);
+           try {
+           $this->db->query($sql);
+           //echo $sql;
+           } catch (Exception $e) {
+            throw new Exception($e->getMessage());
+           }
+        }
+
     }
 ?>

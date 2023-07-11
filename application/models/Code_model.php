@@ -42,41 +42,5 @@ class Code_model extends CI_Model{
         $row = $query->row_array();
         return $row;      
     }
-
-    public function getAllCodeInvalidate()
-    {
-        $sql="SELECT * FROM V_CodeClient WHERE etat=0";
-        $query=$this->db->query($sql);
-        $liste=array();
-        foreach($query->result_array() as $row){
-            $liste[]=$row;
-        }
-        return $liste; 
-    }
-
-    public function updateEtatCode($idCode)
-    {
-       $sql="UPDATE Code SET etat=1 WHERE idCode=%d";
-       $sql=sprintf($sql,$idCode);
-       $this->db->query($sql) ;
-    }
-
-    public function updateCodeUSer($idCodeUser)
-    {
-        $sql="UPDATE CodeUser SET etat=1 WHERE idCode=%d";
-       $sql=sprintf($sql,$idCodeUser);
-       $this->db->query($sql) ;
-    }
-
-    public function UpdateCompte($iduser,$vola)
-    {
-        $user=$this->getCompte($iduser);
-        $vaovao=$user['compte']+$vola;
-
-        $sql="UPDATE User SET compte=%d WHERE idUser=%d";
-        $sql=sprintf($sql,$vaovao,$iduser);
-        $this->db->query($sql);
-    }
-
 }
 ?>

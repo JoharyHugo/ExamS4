@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class BackOffice extends CI_Controller {
+class FrontOffice extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -28,5 +28,15 @@ class BackOffice extends CI_Controller {
 	{
 		$this->load->view('loginClient');
 	}		
+
+	public function loginAdmin()		// Charge la page login de l'admin
+	{
+		$this->load->view('loginAdmin');
+	}
+
+	public function inscription()		// Charge la page inscription
+	{
+		$this->load->view('signup');
+	}
 
 }

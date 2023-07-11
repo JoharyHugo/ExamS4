@@ -19,7 +19,8 @@
                                 <!-- TOP CAMPAIGN-->
                                 <div class="top-campaign">
                                     <h3 class="title-3 m-b-30">CRUD Regime</h3>
-                                    <button id="regime" > + Creation New Regime </button>
+                                    <button  id="regime">+ Create New Regime</button>
+
                                     <div class="table-responsive">
                                         <table class="table table-top-campaign">
                                             <tbody>
@@ -96,7 +97,7 @@
                             <div class="col-md-12">
                                 <!-- DATA TABLE -->
                                 <h3 class="title-5 m-b-35">CRUD Sakafo</h3>
-                              
+                                <button  class="item" data-toggle="modal" data-target="#editSakafo" data-placement="top" title="Create Sakafo"  id="regime">+ Create New Sakofo</button>
                                 <div class="table-responsive table-responsive-data2">
                                     <table class="table table-data2">
                                         <thead>
@@ -141,7 +142,7 @@
                                 <!-- DATA TABLE -->
                                 <br>
                                 <h3 class="title-5 m-b-35">CRUD Sport</h3>
-                              
+                                <button  class="item" data-toggle="modal" data-target="#editSport" data-placement="top" title="Create Sport" id="regime">+ Create New Sport</button>
                                 <div class="table-responsive table-responsive-data2">
                                     <table class="table table-data2">
                                         <thead>
@@ -189,4 +190,54 @@
                     </div>
                 </div>
             </div>
+</div>
+<!-- Modal pour Create Sakafo -->
+<div class="modal fade" id="editSakafo" tabindex="-1" role="dialog" aria-labelledby="editSakafoLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="editSakafoLabel">Create Sakafo</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="sakafoName">Sakafo Name</label>
+            <input type="text" class="form-control" id="sakafoName" placeholder="Enter sakafo name">
+          </div>
+          <div class="form-group">
+            <label for="sakafoDescription">Sary</label>
+            
+            <input class="form-control" id="sakafoDescription" rows="3" placeholder="Enter sakafo description" type="file" name="sary">
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal pour Create Sport -->
+<div class="modal fade" id="editSport" tabindex="-1" role="dialog" aria-labelledby="editSportLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="editSportLabel">Create Sport</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="sportName">Sport Name</label>
+            <input type="text" class="form-control" id="sportName" placeholder="Enter sport name">
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
 </div>

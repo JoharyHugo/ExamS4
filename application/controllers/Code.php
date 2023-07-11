@@ -10,7 +10,7 @@ class Code extends CI_Controller{
         $this->load->view('headPage');
 		$this->load->view('nav1');
 		$this->load->view('nav2');
-		$this->load->view('codeForm',$data);
+		$this->load->view('codeform',$data);
 		$this->load->view('footPage');
     }
 

@@ -25,15 +25,19 @@ class Regime extends CI_Controller {
 		$idUser=$this->session->userdata('id');
         $Apropos= $this->model->getIdObjectif($idUser);
        $regime= $this->model->getRegimeSpecifique($Apropos['idObjectif'],$Apropos['poids']);
-	   $sport=$this->model-> getSportSpecifique($regime[0]['idRegime']);
+	    try {
+			$sport=$this->model-> getSportSpecifique($regime[0]['idRegime']);
 	   
-	   $data['regime']=$regime;
-       $data['sport']=$sport;
-		$this->load->view('headPage');
-		$this->load->view('nav1');
-		$this->load->view('nav2');
-		$this->load->view('tabregime',$data);
-		$this->load->view('footPage');
+			$data['regime']=$regime;
+			$data['sport']=$sport;
+			 $this->load->view('headPage');
+			 $this->load->view('nav1');
+			 $this->load->view('nav2');
+			 $this->load->view('tabregime',$data);
+			 $this->load->view('footPage');
+		} catch (Exception $th) {
+			echo $th->getMessage();
+		}
 	} 
 	
 	public function tableauPdf()

@@ -14,6 +14,7 @@
                     </form>
                   </div>
                 </div>
+                <h2>Votre Compte:<?php echo $user['compte'];  ?></h2>
               </div>
               <div class="col-lg-6 grid-margin stretch-card">
                 <div class="card">

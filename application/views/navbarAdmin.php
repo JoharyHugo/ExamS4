@@ -34,6 +34,9 @@
                                 <i class="fas fa-table"></i>CRUD</a>
                         </li>
                         <li>
+                            <a href="#">
+                                <i class="fas fa-calendar-alt"></i>Deconnexion</a>
+                        </li>
                        
                         <li class="has-sub">
                             <a class="js-arrow" href="#">
@@ -108,7 +111,10 @@
                             <a href="<?php echo site_url("sakafoAdmin/getAllFood");?>">
                                 <i class="fas fa-table"></i>CRUD</a>
                         </li>
-                        
+                        <li>
+                            <a href="<?php echo site_url('LoginAdmin/deconnectAdmin') ?>">
+                                <i class="fas fa-calendar-alt"></i>Deconnexion</a>
+                        </li>
                         
                     </ul>
                 </nav>

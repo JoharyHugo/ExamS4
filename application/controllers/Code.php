@@ -5,8 +5,10 @@ class Code extends CI_Controller{
     public function codeForm()
     {
         $this->load->model('Code_model','model');
-        $data['code']=$this->model->getAllCode();
+        $idUser=$this->session->userdata('id');
         
+        $data['code']=$this->model->getAllCode();
+        $data['user']=$this->model->getCompte($idUser);
         $this->load->view('headPage');
 		$this->load->view('nav1');
 		$this->load->view('nav2');

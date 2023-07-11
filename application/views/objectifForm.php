@@ -13,7 +13,7 @@
                          <?php } ?>
                       </select>
                       <label class="labelSpecial" for="poid" style="color: black;">Poid a gagne ou a perdre</label>
-                      <input class="inputSpecial" type="number" name="poid" id="poid">
+                      <input class="inputSpecial" type="number" name="poid" id="poid" value="20">
                       <input type="submit" value="Valider">
                     </form>
                   </div>

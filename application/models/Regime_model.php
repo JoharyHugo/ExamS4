@@ -21,9 +21,13 @@
            // echo $sql;
             $query = $this->db->query($sql);
             $liste=array();
+            if ($query==null) {
+              throw new Exception("Regime non disponible");
+            }
             foreach($query->result_array() as $row){
              $liste[]=$row;
             }
+
             return $liste;
 
         }   

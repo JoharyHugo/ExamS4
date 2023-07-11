@@ -26,7 +26,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="<?php echo site_url('Chart/graph'); ?>">
                                 <i class="fas fa-chart-bar"></i>Charts</a>
                         </li>
                         <li>
@@ -101,7 +101,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="<?php echo site_url('Chart/graph'); ?>">
                                 <i class="fas fa-chart-bar"></i>Charts</a>
                         </li>
                         <li>

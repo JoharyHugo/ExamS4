@@ -94,8 +94,8 @@
 						</span>
 
 						<a href="<?php echo site_url('Welcome/admin'); ?>" style="color:red">Admin</a>
-						<a href="<?php echo site_url('Welcome/inscription'); ?>" class="txt2">
-							Sign Up
+						<a href="<?php echo site_url('Welcome/inscription'); ?>" class="txt2" style="color:blue;">
+							Inscription
 						</a>
 
 					</div>

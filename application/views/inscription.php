@@ -12,6 +12,13 @@
     <!-- Main css -->
     <link rel="stylesheet" href="<?php echo base_url("assets/inscription/css/style.css"); ?>">
 </head>
+<style>
+    select{
+        width: 490px;
+        height: 47px;
+        border: 1px solid #ebebeb;
+    }
+</style>
 <body>
 
     <div class="main">

@@ -12,6 +12,8 @@ class Code_model extends CI_Model{
         }
         return $liste; 
     }
+
+
     public function verificationcode($code)
     {
         $sql="SELECT * FROM Code WHERE code='%s' AND etat=0";
@@ -30,6 +32,15 @@ class Code_model extends CI_Model{
         $sql="INSERT INTO CodeUser VALUES(null,%d,%d,0)";
         $sql=sprintf($sql,$idcode,$idUser);
         $this->db->query($sql) ;
+    }
+
+    public function getCompte($idUser)
+    {
+        $sql="SELECT * FROM User where idUser= %d";
+        $sql=sprintf($sql,$idUser);
+        $query = $this->db->query($sql);
+        $row = $query->row_array();
+        return $row;      
     }
 }
 ?>

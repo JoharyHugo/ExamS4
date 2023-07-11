@@ -28,9 +28,15 @@
                           </tr>
                           <?php } ?>
                         </tbody>
+                        <h3 style="color:gray;">Prix regime:  <?php echo $regime[0]['prix']; ?> Ar</h3>
+                        <h3  style="color:gray;">Duree regime: <?php echo $regime[0]['dureeRegime']; ?> j</h3>
+                        
                       </table>
+                      
                     </div>
                   </div>
+                  
+                 <button style="background-color:green;"><a href="<?php echo site_url('Code/verification').'?parametre='.$regime[0]['prix']; ?>">Payer</a></button>
                 </div>
               </div>
               <div class="col-lg-6 grid-margin stretch-card">

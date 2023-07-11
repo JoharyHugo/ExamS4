@@ -21,10 +21,7 @@ class Welcome extends CI_Controller {
 	public function index()
 	{
 		$this->load->view('login');
-		/*$this->load->view('headerAdmin');
-		$this->load->view('navbarAdmin');
-		$this->load->view('sakafodetail');
-		$this->load->view('footerAdmin');*/
+		
 	}	
 	
 	public function inscription()
@@ -37,5 +34,10 @@ class Welcome extends CI_Controller {
 		$this->load->view('nav1');
 		$this->load->view('nav2');
 		$this->load->view('footPage');
+	}
+
+	public function admin()
+	{
+		
 	}
 }

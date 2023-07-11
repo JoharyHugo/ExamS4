@@ -16,7 +16,7 @@
         }   
         public function inscription($nom, $mdp,$genre)
         {  
-           $sql="insert into User values(null,'%s','%s','%s')";
+           $sql="insert into User values(null,'%s','%s','%s',0)";
            $sql=sprintf($sql,$nom, $mdp,$genre);
            try {
            $this->db->query($sql);
@@ -29,7 +29,7 @@
 
         public function inscriptionInfoUser($idUser,$poid,$taille)
         {  
-           $sql="insert into InfoUser values(%d,%d,%d,0)";
+           $sql="insert into InfoUser values(%d,%d,%d)";
            $sql=sprintf($sql,$idUser,$poid,$taille);
            try {
            $this->db->query($sql);

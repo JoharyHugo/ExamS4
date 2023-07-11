@@ -11,14 +11,14 @@ CREATE TABLE User(
     idUser INT PRIMARY KEY Auto_increment,
     nom VARCHAR(20),
     mdp VARCHAR(20),
-    genre VARCHAR(20)
+    genre VARCHAR(20),
+    compte INT
 );
 
 CREATE TABLE InfoUser(
     idUser INT,
     taille INT,
     poid INT,
-    compte INT,
     FOREIGN KEY (idUser) REFERENCES User(idUser)
 );
 
@@ -106,6 +106,12 @@ join Sport on Sport.idSport=Rsport.idSport;
 
  select *from V_RegimeSakafoComplet where idObjectif=1 and p1<=9 and p2>=10
 
+
+CREATE OR REPLACE VIEW V_CodeClient as 
+SELECT cu.idCodeUser,c.idCode,c.code,c.prix,cu.idUser,cu.etat,u.nom FROM Code c
+join CodeUser cu ON  c.idCode=cu.idCode
+join User u ON u.idUser=cu.idUser;
+
 select *from V_RegimeSakafoComplet where idObjectif=1 and p1<=9 and p2>=10;
 select *from V_RegimeSakafoComplet where idObjectif=1 and p1<=9 and p2>=10
 insert into Objectif values (null,'Augmenter le poids');
@@ -183,14 +189,16 @@ insert into code values(null,'2500089012',25000,0);
 insert into code values(null,'3000034567',30000,0);
 
 
-insert into User values(null,'jenny','aa','femme');
-insert into User values(null,'koto','koto','homme');
-insert into User values(null,'rojo','rojo','homme');
-insert into User values(null,'soa','soa','femme');
-insert into User values (null,'jean','jean','homme');
+insert into User values(null,'jenny','aa','femme',0);
+insert into User values(null,'koto','koto','homme',0);
+insert into User values(null,'rojo','rojo','homme',0);
+insert into User values(null,'soa','soa','femme',0);
+insert into User values (null,'jean','jean','homme',0);
 
-insert into InfoUser values(1,150,50,0);
-insert into InfoUser values(2,170,70,0);
-insert into InfoUser values(3,160,50,0);
-insert into InfoUser values(4,155,70,0);
-insert into InfoUser values(5,165,100,0);
+insert into InfoUser values(1,150,50);
+insert into InfoUser values(2,170,70);
+insert into InfoUser values(3,160,50);
+insert into InfoUser values(4,155,70);
+insert into InfoUser values(5,165,100);
+
+insert into Admin values(null,'jenny','ok');

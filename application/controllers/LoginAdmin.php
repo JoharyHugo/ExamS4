@@ -13,7 +13,9 @@ class LoginAdmin extends CI_Controller{
           $this->session->set_userdata('idAdmin', $donne['idAdmin']);
            $this->session->set_userdata('nomAdmin', $nom);
 
-           $this->load->view('accueilAdmin');
+           
+           redirect("Code/allDemande");
+           
 
         } catch (Exception $e) {
             $message=$e->getMessage();

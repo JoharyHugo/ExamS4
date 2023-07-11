@@ -16,7 +16,7 @@ class SakafoAdmin extends CI_Controller{
         $data['regimes'] = $regime;
         
         $this->load->view('headerAdmin');
-//		$this->load->view('navbarAdmin');
+     	$this->load->view('navbarAdmin');
 		$this->load->view('sakafodetail',$data);
 		$this->load->view('footerAdmin');
     }

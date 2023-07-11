@@ -29,5 +29,25 @@ class Code extends CI_Controller{
            echo $code;
         }
     }
+    public function verification()
+    {
+        
+        $this->load->model('Code_model','model');
+        $idUser=$this->session->userdata('id');
+        $compte =$this->model->getCompte($idUser);
+        $prix=$this->input->get('parametre');
+        try {
+            if ($compte['compte']>=$prix) {
+                $valeurVao=$prix-$compte['compte'];
+                redirect("regime/tabRegime");
+            }
+            else if ($compte['compte']<=$prix) {
+                redirect("Code/codeForm");
+            }
+        }catch (Exception $e) {
+            echo $e->getMessage();
+            echo $code;
+         } 
+    }
 }
 ?>

@@ -26,12 +26,12 @@
 	<div class="contact1">
 		<div class="container-contact1">
 			<div class="contact1-pic js-tilt" data-tilt>
-				<img src="<?php echo base_url("assets/img/sakafo.jpg"); ?>" alt="IMG">
+				<img src="<?php echo base_url("assets/img/sport.jpg"); ?>" alt="IMG">
 			</div>
 
 			<form class="contact1-form validate-form" enctype="multipart/form-data">
 				<span class="contact1-form-title">
-					Update Sakafo
+					Update Sport
 				</span>
 
 				<div class="wrap-input1 validate-input" data-validate = "Name is required">
@@ -39,10 +39,7 @@
 					<span class="shadow-input1"></span>
 				</div>
 
-				<div class="wrap-input1 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-					<input class="input1" type="file" name="email" placeholder="Votre photo">
-					<span class="shadow-input1"></span>
-				</div>
+				
 
 				
 
